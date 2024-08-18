@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12_Yetişkin_Css</title>
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- * Fontawesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1 class="title">Css Flexbox Yapısı</h1>
+    <!-- ! Flexbox Yapısı -->
+
+    <!-- *  Html deki elemanların daha esnek bir şekilde hizalanması için 'flexbox' yapısı kullanılır.Bu yapı içerisindeki elemanların statik pozisyonlarının dışında hizalanması için kullanılır. Flexbox yapısını aktif etmek için 'display:flex' kodu yazılır.Fakat bu kod kapsayıcı elemana verilmelidir.Ör: Bir div içerisindeki kutular daha esnek şekilde hizalanacaksa bu display:flex kodu kapsayıcı eleman olan div e verilir. Flexbox yapısı aktif edilince bazı kodlar çalışır duruma gelir. 
+     
+    * flex-direction * gap * justify-content
+
+    * flex-direction: Yapının yönünü belirler.Yani içerisindeki elemanlar satır şeklinde mi sütun şeklinde mi hizalanacak bunu belirlemek için kullanılır.Bu ifadenin default değeri row dur.Yani flexbpx yapısı aktif edilirse otamatik olarak row gelir.
+    -->
+    <h1>display:flex && flex-direction:row</h1>
+    <div class="container">
+      <div class="kutu kt-1">Kutu-1</div>
+      <div class="kutu kt-2">Kutu-2</div>
+      <div class="kutu kt-3">Kutu-3</div>
+      <div class="kutu kt-4">Kutu-4</div>
+      <div class="kutu kt-5">Kutu-5</div>
+      <div class="kutu kt-6">Kutu-6</div>
+      <div class="kutu kt-7">Kutu-7</div>
+      <div class="kutu kt-8">Kutu-8</div>
+      <div class="kutu kt-9">Kutu-9</div>
+      <div class="kutu kt-10">Kutu-10</div>
+    </div>
+    <h1>display:flex && flex-direction:column</h1>
+    <div class="container1">
+      <div class="kutu kt-1">Kutu-1</div>
+      <div class="kutu kt-2">Kutu-2</div>
+      <div class="kutu kt-3">Kutu-3</div>
+      <div class="kutu kt-4">Kutu-4</div>
+      <div class="kutu kt-5">Kutu-5</div>
+      <div class="kutu kt-6">Kutu-6</div>
+      <div class="kutu kt-7">Kutu-7</div>
+      <div class="kutu kt-8">Kutu-8</div>
+      <div class="kutu kt-9">Kutu-9</div>
+      <div class="kutu kt-10">Kutu-10</div>
+    </div>
+    <h1>display:flex &&</h1>
+    <div class="container2">
+      <div class="kutu kt-1">Kutu-1</div>
+      <div class="kutu kt-2">Kutu-2</div>
+      <div class="kutu kt-3">Kutu-3</div>
+      <div class="kutu kt-4">Kutu-4</div>
+      <div class="kutu kt-5">Kutu-5</div>
+      <div class="kutu kt-6">Kutu-6</div>
+      <div class="kutu kt-7">Kutu-7</div>
+      <div class="kutu kt-8">Kutu-8</div>
+      <div class="kutu kt-9">Kutu-9</div>
+      <div class="kutu kt-10">Kutu-10</div>
+    </div>
+
+    <!--  -->
+    <div class="gap-kapsayıcı">
+      <div style="background-color: aqua">Kutu</div>
+      <div style="background-color: aqua">Kutu</div>
+      <div style="background-color: aqua">Kutu</div>
+      <div style="background-color: aqua">Kutu</div>
+      <div style="background-color: aqua">Kutu</div>
+      <div style="background-color: aqua">Kutu</div>
+    </div>
+
+    <!--  -->
+    <h1 class="başlık">Udemig Akademi</h1>
+    <h2 class="başlık-1">Udemig Akademi</h2>
+    <h3 class="başlık-2">Udemig Akademi</h3>
+    <h4 class="başlık-3">Udemig Akademi</h4>
+    <h5 class="başlık-4">Udemig Akademi</h5>
+
+    <p class="açıklama">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <p class="açıklama-1">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <p class="açıklama-2">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <p class="açıklama-3">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <p class="açıklama-4">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <p class="açıklama-5">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <p class="açıklama-6">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <!-- ! Html de block elemanlar bulunduğu satırı tamamen kaplar.Ör: heading etiketleri,div İnline elemanlar ise  bulunduğu satırda içeriğindeki eleman kadar yer kaplar.Ör: img,span-->
+    <div id="kutu">Kutu</div>
+    <img
+      class="picture"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pUgEWAXp8rOTDU0aaeybZ3o0sQm-USFlnQ&s"
+      alt=""
+    />
+    <img
+      class="picture"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pUgEWAXp8rOTDU0aaeybZ3o0sQm-USFlnQ&s"
+      alt=""
+    />
+    <div id="kutu1">Kutu</div>
+
+    <p class="tanıtım">
+      Piyasanın en iyi yazılım akademisi Udemig de Css dersi işliyoruz.
+    </p>
+    <p class="tanıtım1">
+      Piyasanın en iyi yazılım akademisi Udemig de Css dersi işliyoruz.
+    </p>
+    <br /><br /><br /><br /><br />
+    <ul class="liste" id="lst-1">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+    <ul class="liste lst-2">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+    <ul class="liste lst-3">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+
+    <ul class="liste lst-4">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+    <ul class="liste lst-5">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+    <ul class="liste lst-6">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+    <ul class="liste lst-7">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+    <ul class="liste lst-8">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+    <ul class="liste lst-9">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+    <ul class="liste lst-10">
+      <li>Html</li>
+      <li>Css</li>
+      <li>Js</li>
+      <li>React</li>
+      <li>Scss</li>
+    </ul>
+    <!-- * Class adlandırması yaparken eğer bu adlandırlamalar arasında boşluk bırakılırsa ör:(arka plan) burada css bunu arka ve plan şeklinde 2 class olarak algılar.İki kelimeden oluşan tek class varsa bunun için araya '-' konuulur.Fakat bu tek yöntem değildir.Diğer bir yöntem ise 'camelCase(deve-cüce)' şeklindeki adlandırmadır.Bu adlandırmada birden fazla kelimeden oluşan class isimlerinde birinci kelime tamamen küçük harf bundan sonra gelen her class adının ilk harfi büyük olacak şekilde adlandırma yapılır. -->
+    <div class="kutucuk beyaz-kutu">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio sit nemo
+        a illum voluptatum ea explicabo iusto natus maiores, itaque enim et
+        inventore beatae saepe quasi. Sit impedit molestias cum!
+      </p>
+    </div>
+    <div class="kutucuk ikinciKutu">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio sit nemo
+        a illum voluptatum ea explicabo iusto natus maiores, itaque enim et
+        inventore beatae saepe quasi. Sit impedit molestias cum!
+      </p>
+    </div>
+    <br /><br /><br /><br /><br />
+    <!-- *  Projemize iconlar eklemek için öncelikle fontawesome'ın cdnjs kütüphanesine gidilir.Sonrasında bu kütüphanenin içerisinde arka planı renkli olan kısımdaki yapıda 'copy link tag' ile link kopyalanır.Sonrasında Htl dosyasındaki head tagi arasına yapıştırılır.Bu adımdan sonra istenilen icon fontawesome sitesinden alınır ve projede kullanılır. Statik olarak gelen iconların boyutu,rengi gibi stil özellikleri css kısımından ayarlanır.  -->
+    <i class="fa-brands fa-slack"></i>
+    <i class="fa-brands fa-github icon"></i>
+    <i class="fa-solid fa-music icon"></i>
+    <br /><br /><br /><br /><br />
+  </body>
+</html>
